@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyMate - Study Tools</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-white border-bottom">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">StudyMate</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="tools.html">Study Tools</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section class="tools-intro">
+            <div class="container">
+                <div class="row py-5">
+                    <div class="col-lg-8">
+                        <p class="section-label mb-2">STUDY TOOLS</p>
+                        <h1 class="fw-bold mb-3">Tools untuk Membantu Kegiatan Belajar</h1>
+                        <p class="text-secondary mb-0">Gunakan beberapa tools sederhana berikut untuk mengatur tugas, mencatat materi, dan membuat waktu belajar lebih teratur.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-5 bg-white">
+            <div class="container">
+                <div class="row align-items-end mb-4">
+                    <div class="col-md-7">
+                        <h2 class="fw-bold mb-2">Daftar Tools</h2>
+                        <p class="text-secondary mb-0">Pilih tools sesuai dengan kebutuhanmu.</p>
+                    </div>
+                    <div class="col-md-5 mt-3 mt-md-0">
+                        <label for="searchInput" class="form-label fw-semibold">Cari tools</label>
+                        <input type="text" id="searchInput" class="form-control" placeholder="Cari berdasarkan nama..." onkeyup="searchTools()">
+                    </div>
+                </div>
+                <div class="row g-4" id="toolsContainer">
+                    <div class="col-md-6 col-lg-4 tool-item">
+                        <div class="tool-box h-100">
+                            <div class="tool-top">
+                                <span class="tool-number">01</span>
+                                <span class="tool-category">PLANNING</span>
+                            </div>
+                            <h4 class="fw-bold">Study Planner</h4>
+                            <p class="text-secondary">Membantu menyusun jadwal belajar berdasarkan mata kuliah dan aktivitas yang perlu diselesaikan.</p>
+                            <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#toolModal" onclick="showTool('Study Planner', 'Study Planner dapat digunakan untuk menyusun rencana belajar, menentukan jadwal, dan mengatur aktivitas akademik agar lebih terarah.')">Lihat Detail</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 tool-item">
+                        <div class="tool-box h-100">
+                            <div class="tool-top">
+                                <span class="tool-number">02</span>
+                                <span class="tool-category">TASK</span>
+                            </div>
+                            <h4 class="fw-bold">Task List</h4>
+                            <p class="text-secondary">Catat tugas kuliah yang harus diselesaikan dan gunakan daftar untuk memantau pekerjaan.</p>
+                            <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#toolModal" onclick="showTool('Task List', 'Task List membantu mencatat berbagai tugas kuliah dan mengelompokkan pekerjaan berdasarkan prioritas atau waktu pengerjaan.')">Lihat Detail</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 tool-item">
+                        <div class="tool-box h-100">
+                            <div class="tool-top">
+                                <span class="tool-number">03</span>
+                                <span class="tool-category">NOTES</span>
+                            </div>
+                            <h4 class="fw-bold">Quick Notes</h4>
+                            <p class="text-secondary">Tempat untuk menyimpan catatan singkat, ide, atau poin penting dari materi perkuliahan.</p>
+                            <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#toolModal" onclick="showTool('Quick Notes', 'Quick Notes dapat digunakan untuk mencatat poin penting dari materi kuliah, ide tugas, atau hal yang perlu diingat.')">Lihat Detail</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 tool-item">
+                        <div class="tool-box h-100">
+                            <div class="tool-top">
+                                <span class="tool-number">04</span>
+                                <span class="tool-category">FOCUS</span>
+                            </div>
+                            <h4 class="fw-bold">Focus Timer</h4>
+                            <p class="text-secondary">Atur waktu belajar agar kamu dapat berkonsentrasi pada satu aktivitas dalam satu waktu.</p>
+                            <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#toolModal" onclick="showTool('Focus Timer', 'Focus Timer membantu membagi waktu belajar menjadi sesi tertentu sehingga kamu dapat menjaga konsentrasi selama mengerjakan aktivitas.')">Lihat Detail</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 tool-item">
+                        <div class="tool-box h-100">
+                            <div class="tool-top">
+                                <span class="tool-number">05</span>
+                                <span class="tool-category">REFERENCE</span>
+                            </div>
+                            <h4 class="fw-bold">Study Resources</h4>
+                            <p class="text-secondary">Simpan daftar referensi seperti buku, artikel, website, atau materi yang digunakan untuk belajar.</p>
+                            <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#toolModal" onclick="showTool('Study Resources', 'Study Resources membantu mengumpulkan berbagai referensi belajar sehingga kamu dapat menemukannya kembali dengan lebih mudah.')">Lihat Detail</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 tool-item">
+                        <div class="tool-box h-100">
+                            <div class="tool-top">
+                                <span class="tool-number">06</span>
+                                <span class="tool-category">SCHEDULE</span>
+                            </div>
+                            <h4 class="fw-bold">Class Schedule</h4>
+                            <p class="text-secondary">Catat jadwal perkuliahan agar kamu dapat mengetahui agenda kelas yang harus diikuti.</p>
+                            <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#toolModal" onclick="showTool('Class Schedule', 'Class Schedule membantu mencatat jadwal mata kuliah, waktu perkuliahan, dan ruangan agar agenda kuliah lebih mudah diingat.')">Lihat Detail</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="noResult" class="text-center py-5 d-none">
+                    <h5 class="fw-bold">Tools tidak ditemukan</h5>
+                    <p class="text-secondary mb-0">Silakan coba kata kunci lainnya.</p>
+                </div>
+            </div>
+        </section>
+        <section class="py-5">
+            <div class="container">
+                <div class="simple-message">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <p class="section-label mb-2">CATATAN</p>
+                            <h3 class="fw-bold mb-2">Gunakan tools sesuai kebutuhan.</h3>
+                            <p class="text-secondary mb-0">Tidak perlu menggunakan semuanya. Pilih beberapa tools yang benar-benar membantu aktivitas belajar sehari-hari.</p>
+                        </div>
+                        <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                            <a href="index.html" class="btn btn-outline-dark px-4">Kembali ke Beranda</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="py-4 bg-dark text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h5 class="fw-bold mb-1">StudyMate</h5>
+                    <p class="text-secondary mb-0">Teman sederhana untuk menemani kegiatan belajar.</p>
+                </div>
+                <div class="col-md-6 text-md-end mt-3 mt-md-0">
+                    <small class="text-secondary">© 2026 StudyMate</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="modal fade" id="toolModal" tabindex="-1" aria-labelledby="toolModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="modalTitle">Study Tool</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-secondary mb-0" id="modalDescription"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

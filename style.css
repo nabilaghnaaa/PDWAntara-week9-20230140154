@@ -1,0 +1,286 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #252525;
+    background-color: #f5f5f3;
+}
+.navbar {
+    min-height: 68px;
+}
+.navbar-brand {
+    color: #252525 !important;
+    font-size: 1.3rem;
+    letter-spacing: -0.5px;
+}
+.nav-link {
+    color: #555 !important;
+    margin-left: 12px;
+    transition: 0.2s ease;
+}
+.nav-link:hover,
+.nav-link.active {
+    color: #000 !important;
+}
+.intro-section {
+    background-color: #f5f5f3;
+}
+.intro-section h1 {
+    max-width: 650px;
+    color: #1f1f1f;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: -2px;
+}
+.intro-label,
+.section-label {
+    color: #777;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.intro-text {
+    max-width: 620px;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.schedule-card {
+    max-width: 460px;
+    margin-left: auto;
+    padding: 30px;
+    background-color: #fff;
+    border: 1px solid #dededb;
+    border-radius: 4px;
+}
+.schedule-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.schedule-header h4 {
+    color: #222;
+}
+.schedule-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #222;
+}
+.schedule-line {
+    height: 1px;
+    background-color: #e5e5e5;
+    margin: 25px 0;
+}
+.schedule-item {
+    display: flex;
+    gap: 25px;
+    padding: 18px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+.schedule-item:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+.schedule-time {
+    min-width: 48px;
+    color: #777;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+.schedule-item h6 {
+    margin-top: 1px;
+    color: #292929;
+}
+.section-text {
+    max-width: 650px;
+    line-height: 1.8;
+}
+.simple-card {
+    padding: 30px;
+    background-color: #fff;
+    border: 1px solid #dededb;
+    transition: 0.25s ease;
+}
+.simple-card:hover {
+    border-color: #999;
+    transform: translateY(-4px);
+}
+.card-number {
+    color: #888;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.simple-card h4 {
+    color: #222;
+}
+.simple-card p {
+    line-height: 1.75;
+}
+.study-tip {
+    padding: 40px;
+    background-color: #f5f5f3;
+    border-top: 1px solid #dcdcd9;
+    border-bottom: 1px solid #dcdcd9;
+}
+.tools-intro {
+    background-color: #f5f5f3;
+    border-bottom: 1px solid #dededb;
+}
+.tools-intro h1 {
+    color: #222;
+    font-size: clamp(2.3rem, 5vw, 4rem);
+    letter-spacing: -1.5px;
+}
+.tools-intro p {
+    max-width: 700px;
+    line-height: 1.8;
+}
+.tool-box {
+    padding: 30px;
+    background-color: #fff;
+    border: 1px solid #dededb;
+    transition: 0.25s ease;
+}
+.tool-box:hover {
+    border-color: #999;
+    transform: translateY(-4px);
+}
+.tool-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 45px;
+}
+.tool-number {
+    color: #888;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+.tool-category {
+    color: #888;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+.tool-box h4 {
+    color: #222;
+    margin-bottom: 12px;
+}
+.tool-box p {
+    min-height: 85px;
+    line-height: 1.7;
+}
+.tool-box .btn {
+    border-radius: 2px;
+    padding: 8px 18px;
+}
+.form-control {
+    border-radius: 2px;
+    border-color: #d6d6d2;
+    padding: 10px 14px;
+}
+.form-control:focus {
+    border-color: #555;
+    box-shadow: 0 0 0 0.15rem rgba(0, 0, 0, 0.08);
+}
+.simple-message {
+    padding: 40px;
+    background-color: #fff;
+    border: 1px solid #dededb;
+}
+footer {
+    margin-top: 0;
+}
+footer h5 {
+    color: #fff;
+}
+footer p {
+    font-size: 0.9rem;
+}
+.btn {
+    border-radius: 2px;
+    font-weight: 600;
+}
+.btn-dark {
+    background-color: #252525;
+    border-color: #252525;
+}
+.btn-dark:hover {
+    background-color: #000;
+    border-color: #000;
+}
+.btn-outline-dark:hover {
+    background-color: #252525;
+}
+.modal-content {
+    border-radius: 3px !important;
+}
+.modal-header,
+.modal-footer {
+    border-color: #eeeeee;
+}
+@media (max-width: 991.98px) {
+    .nav-link {
+        margin-left: 0;
+        padding: 10px 0;
+    }
+    .intro-section {
+        padding-top: 10px;
+    }
+    .schedule-card {
+        margin-left: 0;
+        max-width: 100%;
+    }
+    .tool-box p {
+        min-height: auto;
+    }
+}
+@media (max-width: 767.98px) {
+    .intro-section h1 {
+        letter-spacing: -1px;
+    }
+    .intro-text {
+        font-size: 1rem;
+    }
+    .schedule-card {
+        padding: 24px;
+    }
+    .schedule-item {
+        gap: 18px;
+    }
+    .simple-card,
+    .tool-box {
+        padding: 25px;
+    }
+    .study-tip,
+    .simple-message {
+        padding: 28px;
+    }
+    .tool-top {
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 575.98px) {
+    .intro-section h1 {
+        font-size: 2.5rem;
+    }
+    .intro-section .btn {
+        width: 100%;
+    }
+    .schedule-card {
+        padding: 20px;
+    }
+    .schedule-item {
+        gap: 14px;
+    }
+    .schedule-time {
+        min-width: 42px;
+    }
+    .simple-card,
+    .tool-box {
+        padding: 22px;
+    }
+}
